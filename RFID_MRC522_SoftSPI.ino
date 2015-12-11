@@ -11,8 +11,8 @@ All text above must be included in any redistribution.
 SOFT_SPI_MISO_PIN = 5 ----- can be changed in the header file
 SOFT_SPI_MOSI_PIN = 6 ----- can be changed in the header file
 SOFT_SPI_SCK_PIN  = 7 ----- can be changed in the header file
-SOFT_SPI_SS_PIN: Pin 8 ----- can be changed in the code
-SOFT_SPI_RST_PIN: Pin 4 ----- can be changed in the code
+SOFT_SPI_SS_PIN: Pin 8 ----- can be changed in the code below
+SOFT_SPI_RST_PIN: Pin 4 ----- can be changed in the code below
 ---------------------------------------------------------------------------------------
 The card number is read using software SPI interface.
 The read value is stored as a string in a variable.
