@@ -24,8 +24,7 @@ The stored value is then printed.
 
 #define SS_PIN 8
 #define RST_PIN 4
-#define RX 11
-#define TX 10
+ 
 RFID rfid(SS_PIN, RST_PIN); //create an instance rfid for the class RFID
 
 // varables to store data
@@ -42,7 +41,8 @@ void setup()
 
 void loop()
 {
-  readRfid();
+ readRfid();
+ printRfid();
 }
 
 void readRfid()
@@ -51,19 +51,27 @@ void readRfid()
   {
     if (rfid.readCardSerial())
     {
-      Serial.println("Card found");
-      Serial.print("Cardnumber: ");
       for (int i=0; i<=4; i++)//card value: "xyz xyz xyz xyz xyz" (15 digits maximum; 5 pairs of xyz)hence 0<=i<=4 //
       {
         RFID = rfid.serNum[i];
         cardNum += RFID; // store RFID value into string "cardNum" and concatinate it with each iteration
       }
-      Serial.println(cardNum);
-      cardNum.remove(0);//This is an arduino function.
-  //remove the stored value after printing. else the new card value that is read
-  // will be concatinated with the previous string. 
-      delay(500);
     }
   }
   rfid.halt();
+}
+
+void printRfid()
+{
+ if (cardNum != '\0')//if string cardNum is not empty, print the value
+ {
+    Serial.println("Card found");
+    Serial.print("Cardnumber: ");
+    Serial.println(cardNum);
+    cardNum.remove(0);
+   //This is an arduino function.
+  //remove the stored value after printing. else the new card value that is read
+  // will be concatinated with the previous string.
+  delay(500); 
+ }
 }
