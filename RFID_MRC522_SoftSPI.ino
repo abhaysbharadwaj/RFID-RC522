@@ -8,9 +8,9 @@ the code follows CC license, check license.txt for more information.
 All text above must be included in any redistribution.
 ---------------------------------------------------------------------------------------
 * Pin layout:
-SOFT_SPI_MISO_PIN = 5 ----- can be changed in the header file
-SOFT_SPI_MOSI_PIN = 6 ----- can be changed in the header file
-SOFT_SPI_SCK_PIN  = 7 ----- can be changed in the header file
+SOFT_SPI_MISO_PIN = 5 ----- can be changed in the RFID.cpp file
+SOFT_SPI_MOSI_PIN = 6 ----- can be changed in the RFID.cpp file
+SOFT_SPI_SCK_PIN  = 7 ----- can be changed in the RFID.cpp file
 SOFT_SPI_SS_PIN: Pin 8 ----- can be changed in the code below
 SOFT_SPI_RST_PIN: Pin 4 ----- can be changed in the code below
 ---------------------------------------------------------------------------------------
