@@ -6,7 +6,7 @@ The link to the module: https://www.aliexpress.com/store/product/High-Quality-MF
 This code uses Software SPI pins instead of the HARDWARE SPI pins of the Arduino. i.e. your SPI pins are not fixed, any digital pin of the arduino can be configured to act as any SPI pin.
 The code uses DigitalIO library to make use of the Software SPI functionality.
 
-This code has been trsted on Arduino Uno and Arduino Nano boards.
+This code has been tested on Arduino Uno and Arduino Nano boards.
 
 # DigitalIO
 The digitalIO library can be found at: https://github.com/greiman/DigitalIO
